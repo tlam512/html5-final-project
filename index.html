@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thư viện ảnh tương tác với chức năng xem trước bằng chuột và bàn phím.">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <p class="eyebrow">INTERACTIVE PHOTO GALLERY</p>
+            <h1>Khám Phá Cảnh Đẹp Qua Ảnh</h1>
+            <p class="subtitle">
+                Khám phá những khung cảnh thiên nhiên tuyệt đẹp.
+                Di chuột hoặc sử dụng bàn phím để xem trước từng hình ảnh.
+            </p>
+        </div>
+    </header>
+
+    <main class="container" id="main-content">
+        <section class="preview-section" aria-labelledby="preview-heading">
+            <h2 id="preview-heading">Ảnh xem trước</h2>
+
+            <div id="image" class="preview" role="status" aria-live="polite">
+                Di chuột hoặc nhấn Tab vào một hình ảnh bên dưới để xem trước tại đây.
+            </div>
+        </section>
+
+        <section class="gallery-section" aria-labelledby="gallery-heading">
+            <h2 id="gallery-heading">Thư viện hình ảnh</h2>
+            <p class="section-description">
+                Chọn một hình ảnh bằng chuột hoặc bàn phím để hiển thị ảnh xem trước.
+            </p>
+
+            <div class="gallery-grid">
+
+                <figure class="gallery-card">
+                    <img class="gallery-image"
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                        alt="Khung cảnh thiên nhiên rộng lớn với núi non và bầu trời" width="900" height="600"
+                        loading="lazy" onmouseover="upDate(this, 'mouseover')" onmouseleave="unDo('mouseleave')"
+                        onfocus="upDate(this, 'focus')" onblur="unDo('blur')">
+                    <figcaption>Khung cảnh thiên nhiên</figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <img class="gallery-image"
+                        src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                        alt="Hồ nước nằm giữa những dãy núi hùng vĩ" width="900" height="600" loading="lazy"
+                        onmouseover="upDate(this, 'mouseover')" onmouseleave="unDo('mouseleave')"
+                        onfocus="upDate(this, 'focus')" onblur="unDo('blur')">
+                    <figcaption>Hồ nước giữa núi</figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <img class="gallery-image"
+                        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                        alt="Ngôi nhà nhỏ bên hồ nước với núi rừng phía xa" width="900" height="600" loading="lazy"
+                        onmouseover="upDate(this, 'mouseover')" onmouseleave="unDo('mouseleave')"
+                        onfocus="upDate(this, 'focus')" onblur="unDo('blur')">
+                    <figcaption>Ngôi nhà bên hồ</figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <img class="gallery-image"
+                        src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                        alt="Những con sóng biển xanh trải dài trên đại dương" width="900" height="600" loading="lazy"
+                        onmouseover="upDate(this, 'mouseover')" onmouseleave="unDo('mouseleave')"
+                        onfocus="upDate(this, 'focus')" onblur="unDo('blur')">
+                    <figcaption>Vẻ đẹp đại dương</figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <img class="gallery-image"
+                        src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                        alt="Ánh nắng hoàng hôn chiếu xuống khung cảnh thiên nhiên" width="900" height="600"
+                        loading="lazy" onmouseover="upDate(this, 'mouseover')" onmouseleave="unDo('mouseleave')"
+                        onfocus="upDate(this, 'focus')" onblur="unDo('blur')">
+                    <figcaption>Ánh hoàng hôn</figcaption>
+                </figure>
+
+                <figure class="gallery-card">
+                    <img class="gallery-image"
+                        src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&amp;fit=crop&amp;w=900&amp;q=85"
+                        alt="Khu rừng xanh với những hàng cây cao và ánh sáng tự nhiên" width="900" height="600"
+                        loading="lazy" onmouseover="upDate(this, 'mouseover')" onmouseleave="unDo('mouseleave')"
+                        onfocus="upDate(this, 'focus')" onblur="unDo('blur')">
+                    <figcaption>Rừng xanh thiên nhiên</figcaption>
+                </figure>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Interactive Photo Gallery - HTML5 Final Project</p>
+        <p>Created by Nguyễn Tiến Tùng Lâm</p>
+    </footer>
+</body>
+
+</html>
